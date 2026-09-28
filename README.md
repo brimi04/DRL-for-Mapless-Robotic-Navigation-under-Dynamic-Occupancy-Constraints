@@ -1,9 +1,5 @@
 # Deep Reinforcement Learning for Mapless Robotic Navigation under Dynamic Occupancy Constraints
 
-Code, trained models, and per-seed results for the paper:
-
-> B. M. Oliva Chuquimia, S. B. Mafra, and F. A. P. de Figueiredo, "Deep Reinforcement Learning for Mapless Robotic Navigation under Dynamic Occupancy Constraints," *IEEE Latin-American Conference on Communications (LATINCOM)*, 2026.
-
 The repository contains the GridWorld environment, the training and evaluation protocol, the 28 trained models of the main comparison (A2C, PPO, DQN, and Double DQN, seven seeds each), and scripts that reproduce every table and result figure of the paper from the released data.
 
 ## Overview
