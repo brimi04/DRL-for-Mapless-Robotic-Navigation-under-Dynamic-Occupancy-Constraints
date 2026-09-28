@@ -1,5 +1,9 @@
 # Deep Reinforcement Learning for Mapless Robotic Navigation under Dynamic Occupancy Constraints
 
+Code, trained models, and per-seed results for the paper:
+
+> B. M. Oliva Chuquimia, S. B. Mafra, and F. A. P. de Figueiredo, "Deep Reinforcement Learning for Mapless Robotic Navigation under Dynamic Occupancy Constraints," *IEEE Latin-American Conference on Communications (LATINCOM)*, 2026.
+
 The repository contains the GridWorld environment, the training and evaluation protocol, the 28 trained models of the main comparison (A2C, PPO, DQN, and Double DQN, seven seeds each), and scripts that reproduce every table and result figure of the paper from the released data.
 
 ## Overview
@@ -59,8 +63,8 @@ tests/                   Unit tests and a reproduction test of the released mode
 Python 3.10 or newer is required.
 
 ```bash
-git clone <repository-url>
-cd mapless-drl-occupancy
+git clone https://github.com/brimi04/DRL-for-Mapless-Robotic-Navigation-under-Dynamic-Occupancy-Constraints.git
+cd DRL-for-Mapless-Robotic-Navigation-under-Dynamic-Occupancy-Constraints
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -126,3 +130,24 @@ Kruskal-Wallis tests indicate significant differences among A2C, PPO, and DQN (p
 - **Reward sensitivity and hyperparameter search.** Only per-seed success rates are released for these studies (models were not archived). In `results/reward_sensitivity/per_seed_success.csv`, one value (PPO, `low_rdelta`, seed 0) is missing from the experiment log and was reconstructed from the reported configuration mean; it is flagged in the `note` column.
 - **Fixed maps.** `gridnav/fixed_maps.py` contains the exact maps used for the transfer evaluation. Map3 results are highly sensitive to its geometry, so modifying the map changes the results substantially.
 - **Software versions.** The experiments were run on Google Colab (CPU). The released results were verified with the versions in `requirements.txt`.
+
+## Citation
+
+If you use this code, please cite:
+
+```bibtex
+@inproceedings{oliva2026mapless,
+  author    = {Oliva Chuquimia, Brithany Michelle and Mafra, Samuel B. and de Figueiredo, Felipe A. P.},
+  title     = {Deep Reinforcement Learning for Mapless Robotic Navigation under Dynamic Occupancy Constraints},
+  booktitle = {IEEE Latin-American Conference on Communications (LATINCOM)},
+  year      = {2026}
+}
+```
+
+## License
+
+This project is released under the MIT License (see `LICENSE`).
+
+## Acknowledgments
+
+This work was supported by CNPq, xGMobile (EMBRAPII-Inatel Competence Center on 5G and 6G Networks), MCTI, RNP, the Brazil 6G project, FAPESP (SEMEAR and SAMURAI projects), FAPEMIG, and FINEP. See the paper for the complete list of grants.
